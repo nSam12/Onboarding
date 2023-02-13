@@ -9,11 +9,11 @@ export interface PrivateRouteProps{
 }
 
 const PrivateRoute:React.FC<PrivateRouteProps> = ({component: RouteComponent, isAuth}) => {
-    //return isAuth ? <Route element = {children} path = {path} key = {path}/> : <NoAuthBlock/>
+    
     if(isAuth){
-        return <RouteComponent/>
+        return <RouteComponent/>;
     }
-    return <NoAuthBlock/>
+    return <NoAuthBlock/>;
 };
 
 export default PrivateRoute;

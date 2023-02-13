@@ -1,10 +1,13 @@
+import { Link, Navigate, } from "react-router-dom";
 import "./BigButton.css";
 
+
 const BigButton = () => {
+
     return (
-        <button className="BigButton">
+        <Link to = "auth"className="BigButton" >
             Cats onboard!
-        </button>
+        </Link>
     );
 };
 

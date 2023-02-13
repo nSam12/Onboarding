@@ -12,25 +12,10 @@ import PageNoFind from "./pages/pagenofind/PageNoFind";
 function App() {
     return (
         <div className="App">
-            <Header />
-            <Routes>
-                <Route element={<MainPage />} path="/" key="/" />
-                <Route element={<AuthPage />} path="/auth" key="/auth" />
-                <Route element={<PageNoFind />} path="*" />
-                <Route element ={<PrivateRoute isAuth = {false} component={SecondPage}/>}  path="/fourstage"/>
-            </Routes>
+            <Navigation/>
         </div>
     );
 }
 
 export default App;
 
-/*
-              <Route element={<MainPage />} path="/" key="/" />
-                <Route element={<AuthPage />} path="/auth" key="/auth" />
-                <PrivateRoute
-                    children={<SecondPage />}
-                    isAuth={false}
-                    path="/fourstage"
-                />
-*/
