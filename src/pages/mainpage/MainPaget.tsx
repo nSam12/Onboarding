@@ -1,13 +1,13 @@
 import "./MainPage.css";
-import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
-import AboutStages from "../../components/AboutStages/AboutStages";
-import CatStage from "../../components/catstage/CatStage";
-import BigButton from "../../components/bigbutton/BigButton";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import AboutStages from "./components/AboutStages/AboutStages";
+import CatStage from "./components/catstage/CatStage";
+import BigButton from "./components/bigbutton/BigButton";
 
 const MainPage = () => {
     return (
-        <div className="age">
+        <div className="MainPage">
             <Header/>
             <AboutStages/>
             <CatStage description="Описание кота норм" catName="Кот Форм" left={true}/>
