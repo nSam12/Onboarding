@@ -1,0 +1,10 @@
+.MainPage{
+    background-color: azure;
+    justify-content: center;
+}
+
+.background {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    background-size: contain;
+}

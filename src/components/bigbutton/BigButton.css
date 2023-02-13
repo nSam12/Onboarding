@@ -1,0 +1,14 @@
+.BigButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 300px;
+    background-color: lightcoral;
+    position: relative;
+    margin: 40px;
+    left: 40%;  
+}
+.BigButton:hover{
+    background-color: rgb(197, 38, 38);
+}

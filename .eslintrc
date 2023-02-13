@@ -1,0 +1,38 @@
+{
+    "extends": [
+        "react-app",
+        "react-app/jest"
+    ],
+    "rules": {
+        "no-unused-vars": "warn",
+        "prefer-const": "warn",
+        "no-console": "warn",
+        "quotes": [
+            "warn",
+            "double"
+        ],
+        "jsx-quotes": [
+            "warn",
+            "prefer-double"
+        ],
+        "indent": [
+            2, 4, {"SwitchCase": 1}
+        ],
+        "max-len": [
+            "warn",
+            {
+                "code": 200
+            }
+        ],
+
+        "semi": [
+            "warn",
+            "always"
+        ],
+        "import/order": [
+            "warn",
+            {}
+        ],
+        
+    }
+}

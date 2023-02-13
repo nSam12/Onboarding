@@ -1,0 +1,13 @@
+.Header{
+    border: 2px solid rgb(0, 0, 0);
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+}
+
+.main_page_navigation_bar_elements {
+    color: black;
+    font-size: 20px;
+}
