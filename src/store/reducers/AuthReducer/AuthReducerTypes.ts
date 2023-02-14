@@ -15,6 +15,15 @@ export enum AuthActionTypes{
     LOGOUT_ACTION = "LOGOUT_ACTION",
 }
 
+export enum AuthToServerTypes{
+    LOGIN_TO_SERVER_ACTION = "LOGIN_TO_SERVER_ACTION"
+}
+
+export interface LoginToServerAction{
+    type: AuthToServerTypes.LOGIN_TO_SERVER_ACTION,
+    payload: AuthInfo,
+}
+
 export interface LoginAction {
     type: AuthActionTypes.LOGIN_ACTION
     payload: IUser

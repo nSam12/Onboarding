@@ -7,6 +7,15 @@ import { Provider } from 'react-redux';
 import { basestore } from './store';
 
 
+import { Server } from "miragejs";
+const mock = new Server({
+    routes() {
+        this.namespace = "/api";
+        this.post("/login", () => {
+            return {accessToken: "ACCESS", refreshToken: "REFRESH", user:{email:"mymail", id:"firs", name:"DIMA"}}
+        });
+    }
+});
 
 
 const root = ReactDOM.createRoot(

@@ -11,18 +11,19 @@ const LoginForm = () => {
     const [password, setPassword] = useState<string>("");
     
     const auth = useTypedSelector((state) => state.auth);
-    const { LoginActionCreator, LogoutActionCreator } = useActions();
+    const { LoginActionCreator, LogoutActionCreator, LoginToServerActionCreator } = useActions();
     
 
-    const LoginSubit = () =>{
+    const LoginSubmit = () =>{
         //console.log(email, password);
-        console.log(auth.isAuth, auth.user.email);
+        console.log(auth);
         const tmpUser:IUser ={
             email: "mail",
             id: "12",
             name: "dan"
         }
-        LoginActionCreator(tmpUser);
+        //LoginActionCreator(tmpUser);
+        LoginToServerActionCreator();
     }
 
     return (
@@ -34,7 +35,7 @@ const LoginForm = () => {
                 placeholder="введите логин"
             />
             <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="введите пароль" />
-            <button onClick={LoginSubit}> Войти </button>
+            <button onClick={LoginSubmit}> Войти </button>
         </div>
     );
 };
