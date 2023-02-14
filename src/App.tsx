@@ -8,14 +8,17 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import PrivateRoute from "./routers/privateroute/PrivateRoute";
 import Header from "./pages/mainpage/components/header/Header";
 import PageNoFind from "./pages/pagenofind/PageNoFind";
+import { Provider } from "react-redux";
+import { basestore } from "./store";
 
 function App() {
     return (
         <div className="App">
-            <Navigation/>
+            <Navigation />
         </div>
     );
 }
 
 export default App;
 
+// <Navigation/>

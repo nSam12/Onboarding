@@ -1,5 +1,8 @@
+import { IUser } from "../../../services/AuthResponse";
+
 export interface AuthState{
     isAuth: boolean
+    user: IUser;
 }
 
 export interface AuthInfo{
@@ -14,10 +17,11 @@ export enum AuthActionTypes{
 
 export interface LoginAction {
     type: AuthActionTypes.LOGIN_ACTION
-    payload: AuthInfo
+    payload: IUser
 }
 
 export interface LogoutAction{
     type: AuthActionTypes.LOGOUT_ACTION
 }
+
 export type AuthAction = LoginAction | LogoutAction
