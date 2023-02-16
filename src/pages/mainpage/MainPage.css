@@ -1,6 +1,8 @@
 .MainPage{
     background-color: azure;
     justify-content: center;
+    background-image: url(./components/cats_pattern.jpg);
+    background-size: contain;
 }
 
 .background {

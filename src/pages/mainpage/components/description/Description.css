@@ -1,3 +1,10 @@
 .Description{
-
+    border: 2px solid black;
+    border-radius: 350px;
+    background-color: lightcoral;
+    height: 200px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

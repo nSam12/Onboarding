@@ -1,14 +1,25 @@
+.BigButtonBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
 .BigButton {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
     width: 300px;
-    background-color: lightcoral;
-    position: relative;
-    margin: 40px;
-    left: 40%;  
+    background-color: lightblue;
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    border: 2px solid black;
+    border-radius: 150px;
 }
 .BigButton:hover{
-    background-color: rgb(197, 38, 38);
+    background-color: lightcoral;
+    transition: 1s;
+
 }

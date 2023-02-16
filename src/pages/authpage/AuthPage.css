@@ -1,8 +1,4 @@
 .AuthPage{
-    background-color: gray;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background-image: url(./components/loginform/cats_pattern.jpg);
+    background-size: contain;
 }

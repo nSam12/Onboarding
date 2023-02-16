@@ -1,5 +1,4 @@
 .Footer{
-    position: flex;
     margin-top: 40px;
     left: 0;
     bottom: 0;
@@ -7,7 +6,8 @@
     height: 80px;
     background-color: lightblue;
     height: 60px;
-    display: block;
+    display: flex;
     justify-content: space-around;
     align-items: center;
+    border: 2px solid rgb(0, 0, 0);
 }

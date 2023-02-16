@@ -5,9 +5,11 @@ import "./BigButton.css";
 const BigButton = () => {
 
     return (
-        <Link to = "auth"className="BigButton" >
-            Cats onboard!
-        </Link>
+        <div className="BigButtonBox">
+            <Link to = "auth"className="BigButton" >
+                Cats onboard!
+            </Link>
+        </div>
     );
 };
 
