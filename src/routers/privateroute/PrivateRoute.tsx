@@ -9,7 +9,7 @@ export interface PrivateRouteProps{
 }
 
 const PrivateRoute:React.FC<PrivateRouteProps> = ({component: RouteComponent, isAuth}) => {
-    
+    console.log("in private router", isAuth)
     if(isAuth){
         return <RouteComponent/>;
     }

@@ -16,7 +16,9 @@ export enum AuthActionTypes{
 }
 
 export enum AuthToServerTypes{
-    LOGIN_TO_SERVER_ACTION = "LOGIN_TO_SERVER_ACTION"
+    LOGIN_TO_SERVER_ACTION = "LOGIN_TO_SERVER_ACTION",
+    LOGOUT_TO_SERVER_ACTION = "LOGOUT_TO_SERVER_ACTION",
+    CHECK_AUTH_TO_SERVER_ACTION = "CHECK_AUTH_TO_SERVER_ACTION"
 }
 
 export interface LoginToServerAction{

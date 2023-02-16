@@ -8,11 +8,23 @@ import { basestore } from './store';
 
 
 import { Server } from "miragejs";
+import { request } from 'http';
 const mock = new Server({
     routes() {
         this.namespace = "/api";
-        this.post("/login", () => {
-            return {accessToken: "ACCESS", refreshToken: "REFRESH", user:{email:"mymail", id:"firs", name:"DIMA"}}
+        this.post("/login", (schema,request) => {
+            const json =JSON.parse(request.requestBody)
+            console.log("MOCK",  json)
+            if(json.email === "user"){
+                return {accessToken: "ACCESS", refreshToken: "REFRESH", user:{email:"from server email", id:"first", name:"DIMA"}}
+            }
+            return {}
+        });
+        this.post("/refresh", (schema,request) => {
+            const json =JSON.parse(request.requestBody)
+            console.log("MOCK",  json)
+            return {accessToken: "ACCESS", refreshToken: "REFRESH", user:{email:"from server email", id:"first", name:"DIMA"}}
+          
         });
     }
 });

@@ -2,7 +2,7 @@ import { AuthAction, AuthActionTypes, AuthState } from "./AuthReducerTypes";
 
 const initialState: AuthState = {
     isAuth: false,
-    user: {email:"", id:"", name:""}
+    user: {email:"initil", id:"inital", name:"initial"}
 };
 
 export const AuthReducer = (
