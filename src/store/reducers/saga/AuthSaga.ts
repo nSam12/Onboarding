@@ -15,7 +15,7 @@ import { API_URL } from "../../../http";
 const getData = async (
     action: AuthInfo
 ): Promise<AxiosResponse<AuthResponse>> => {
-    return AuthService.login(action.login, action.login);
+    return AuthService.login(action.login, action.password);
 };
 
 const getDataCheck = async (): Promise<AxiosResponse<AuthResponse>> => {
