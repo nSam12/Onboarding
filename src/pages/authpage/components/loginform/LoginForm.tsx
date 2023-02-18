@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { text } from "stream/consumers";
 import { useState } from "react";
 import "./LoginForm.css";
@@ -15,6 +15,11 @@ const LoginForm = () => {
     const auth = useTypedSelector((state) => state.auth);
     const { LoginActionCreator, LogoutActionCreator, LoginToServerActionCreator } = useActions();
     const navigate = useNavigate();
+    useEffect(()=>{
+        if(auth.isAuth){
+            navigate("/fourstage");
+        }
+    })
 
     const LoginSubmit = () =>{
 
@@ -26,9 +31,7 @@ const LoginForm = () => {
         console.log("after click", email, password)
         LoginToServerActionCreator({login:email, password});
         console.log("aвторизоавны ли мы", auth.isAuth)
-        if(auth.isAuth){
-            navigate("/fourstage");
-        }
+
     }
 
     return (

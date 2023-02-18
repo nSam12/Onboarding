@@ -1,6 +1,20 @@
+import { useNavigate } from "react-router-dom";
 
-const PageNoFind = () =>{
-    return <div className="PageNoFin"> NO PAGE</div>
-}
+const PageNoFind = () => {
+    const navigate = useNavigate();
+    return (
+        <div className="PageNoFind">
+           
+            NO PAGE
+            <button
+                onClick={() => {
+                    navigate("/");
+                }}
+            >
+                На главную
+            </button>
+        </div>
+    );
+};
 
-export default PageNoFind
+export default PageNoFind;

@@ -33,12 +33,13 @@ export function* loginWorker(action: LoginToServerAction) {
         const datafromserver: AxiosResponse<AuthResponse> = yield call(() =>
             getData(action.payload)
         );
-        
+        yield console.log("adress", datafromserver.request)
         const user: IUser = yield datafromserver.data.user;
         yield localStorage.setItem("token", datafromserver.data.accessToken);
         if(datafromserver.data.accessToken !== undefined){
             yield put(LoginActionCreator(user));
         }
+        yield console.log("login function end")
     } catch (e: any) {
         yield console.log(e.response?.data?.message);
     }
