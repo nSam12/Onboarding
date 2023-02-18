@@ -17,7 +17,7 @@ const mock = new Server({
             const json =JSON.parse(request.requestBody)
             console.log("MOCK",  json)
             if(json.email === "user"){
-                return {accessToken: "ACCESS", refreshToken: "REFRESH", user:{email:"from server email", id:"first", name:"DIMA"}}
+                return {accessToken: "ACCESS", refreshToken: "REFRESH"}
             }
             return {}
         });

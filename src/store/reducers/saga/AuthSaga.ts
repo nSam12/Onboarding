@@ -34,7 +34,7 @@ export function* loginWorker(action: LoginToServerAction) {
             getData(action.payload)
         );
         yield console.log("adress", datafromserver.request)
-        const user: IUser = yield datafromserver.data.user;
+        const user: IUser = yield {name: "", id:"", email:"" }//datafromserver.data.user;
         yield localStorage.setItem("token", datafromserver.data.accessToken);
         if(datafromserver.data.accessToken !== undefined){
             yield put(LoginActionCreator(user));
@@ -61,10 +61,10 @@ export function* checkAuthWorker() {
     try {
         yield console.log("refresh called")
         //const response:AuthResponse = yield call( ()=>getDataCheck());
-        const response:AuthResponse ={accessToken:"DA", refreshToken: "DA", user: {name: "from refresh", id:"d", email:"fr"}}
+        const response:AuthResponse ={accessToken:"DA", refreshToken: "DA"}
         yield console.log(response.accessToken)
         yield localStorage.setItem("token", response.accessToken)
-        yield put(LoginActionCreator(response.user));
+        //yield put(LoginActionCreator(response);
         yield console.log("refresh end")
     } catch (e:any) {
         console.log(e.response?.data?.message);
