@@ -18,28 +18,34 @@ const getData = async (
     return AuthService.login(action.login, action.password);
 };
 
+const getUserData = async (): Promise<IUser> => {
+    return (await AuthService.getUser()).data;
+};
+
 const getDataCheck = async (): Promise<AxiosResponse<AuthResponse>> => {
-    console.log("data check function")
-    return await axios.get<AuthResponse>(`${API_URL}/refresh`, {withCredentials: true});
+    console.log("data check function");
+    return await axios.get<AuthResponse>(`${API_URL}/refresh`, {
+        withCredentials: true,
+    });
 };
 
 const logout = async (): Promise<void> => {
-    await await AuthService.logout();
+    return await AuthService.logout();
 };
-
 
 export function* loginWorker(action: LoginToServerAction) {
     try {
         const datafromserver: AxiosResponse<AuthResponse> = yield call(() =>
             getData(action.payload)
         );
-        yield console.log("adress", datafromserver.request)
-        const user: IUser = yield {name: "", id:"", email:"" }//datafromserver.data.user;
+        yield console.log("adress", datafromserver);
+        //const user: IUser = yield {name: "", id:"", email:"" }//datafromserver.data.user;
+        const user: IUser = yield call(() => getUserData());
         yield localStorage.setItem("token", datafromserver.data.accessToken);
-        if(datafromserver.data.accessToken !== undefined){
-            yield put(LoginActionCreator(user));
-        }
-        yield console.log("login function end")
+        yield console.log("setuser", user);
+        yield put(LoginActionCreator(user));
+
+        yield console.log("login function end");
     } catch (e: any) {
         yield console.log(e.response?.data?.message);
     }
@@ -47,10 +53,9 @@ export function* loginWorker(action: LoginToServerAction) {
 
 export function* logoutWorker() {
     try {
-        yield console.log("logout worker")
-        //yield call(()=>logout());
+        yield console.log("logout worker");
         yield localStorage.removeItem("token");
-        yield console.log("Logout action in saga")
+        yield console.log("Logout action in saga");
         yield put(LogoutActionCreator());
     } catch (e: any) {
         console.log(e.response?.data?.message);
@@ -59,14 +64,14 @@ export function* logoutWorker() {
 
 export function* checkAuthWorker() {
     try {
-        yield console.log("refresh called")
-        //const response:AuthResponse = yield call( ()=>getDataCheck());
-        const response:AuthResponse ={accessToken:"DA", refreshToken: "DA"}
-        yield console.log(response.accessToken)
-        yield localStorage.setItem("token", response.accessToken)
-        //yield put(LoginActionCreator(response);
-        yield console.log("refresh end")
-    } catch (e:any) {
+        yield console.log("IN CHECH AUTH SAGA")
+        const response:AuthResponse = yield call (()=>{axios.get<AuthResponse>(`${API_URL}/refresh`, {withCredentials: true,
+        })});
+        yield console.log("from refresh checkAuth", response);
+        const user: IUser = yield call(() => getUserData());
+        yield put(LoginActionCreator(user))
+        localStorage.setItem("token", response.accessToken);
+    } catch (e: any) {
         console.log(e.response?.data?.message);
     }
 }
@@ -74,5 +79,8 @@ export function* checkAuthWorker() {
 export function* authWatcher() {
     yield takeEvery(AuthToServerTypes.LOGIN_TO_SERVER_ACTION, loginWorker);
     yield takeEvery(AuthToServerTypes.LOGOUT_TO_SERVER_ACTION, logoutWorker);
-    yield takeEvery(AuthToServerTypes.CHECK_AUTH_TO_SERVER_ACTION, checkAuthWorker);
+    yield takeEvery(
+        AuthToServerTypes.CHECK_AUTH_TO_SERVER_ACTION,
+        checkAuthWorker
+    );
 }

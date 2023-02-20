@@ -19,13 +19,22 @@ const mock = new Server({
             if(json.email === "user"){
                 return {accessToken: "ACCESS", refreshToken: "REFRESH"}
             }
-            return {}
+            return {messaga: "wring password", timestamp: 123213}
         });
         this.post("/refresh", (schema,request) => {
             const json =JSON.parse(request.requestBody)
             console.log("MOCK",  json)
-            return {accessToken: "ACCESS", refreshToken: "REFRESH", user:{email:"from server email", id:"first", name:"DIMA"}}
+            return {accessToken: "ACCESS", refreshToken: "REFRESH"}
         });
+
+        this.get("/formstage", (schema, request) => {
+            console.log("request from stages", request.requestHeaders)
+            return {isLock: false, complite: 0};
+        })
+
+        this.get("/getuser", (schema, request) => {
+            return {email: "fromserver@mail.com", id: "one", name: "Victor"}
+        })
     }
 });
 

@@ -21,7 +21,8 @@ function App() {
         if(localStorage.getItem("token")){
             CheckAuthToServerActionCreator();
         }
-    }, [])
+    }, []);
+
     return (
         <div className="App">
             <Navigation />
