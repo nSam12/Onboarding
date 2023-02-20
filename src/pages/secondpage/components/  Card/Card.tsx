@@ -1,11 +1,13 @@
 
-export interface CardProps {
-    children?: React.ReactNode;
+import { FC } from "react";
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+    children?: React.ReactNode,
+    
 }
 
-const Card = (props: CardProps) => {
-    return <div>
-        {props.children}
+const Card = ({children, ...other}: CardProps) => {
+    return <div style ={{border: '2px solid red'}} {...other}>
+        {children}
     </div>
 }
 

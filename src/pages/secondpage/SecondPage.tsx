@@ -10,6 +10,7 @@ import StagesCard from "./components/ StagesCard/StagesCard";
 import Header from "../mainpage/components/header/Header";
 import Footer from "../mainpage/components/footer/Footer";
 import { AuthState } from "../../store/reducers/AuthReducer/AuthReducerTypes";
+import DispatcherCard from "./components/ DispatcherCard/DispatcherCard";
 
 const SecondPage = () => {
     const auth:AuthState = useTypedSelector((state) => state.auth);
@@ -17,8 +18,6 @@ const SecondPage = () => {
     const navigate = useNavigate();
 
     const [T, setT] = useState()
-
- 
 
     useEffect(() => {
         StagesDataService.getFormingStage().then((res)=>{
@@ -41,7 +40,7 @@ const SecondPage = () => {
         <div className="SecondPage">
             {" "}
             <Header/>
-            <h1>{String(auth.user.email)}</h1>
+            <h1>{String(auth.user.name) + " " +String(auth.user.id) + " "+ String(auth.user.email)}</h1>
             <button onClick={LogoutFunction}> Выйти </button>
             <button
                 onClick={() => {
@@ -52,7 +51,7 @@ const SecondPage = () => {
             </button>
 
             <StagesCard></StagesCard>
-
+            <DispatcherCard></DispatcherCard>
    
             <Footer/>
         </div>

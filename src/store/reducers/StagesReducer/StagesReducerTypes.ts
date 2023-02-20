@@ -1,6 +1,21 @@
 
+export interface Stages{
+    forming: Stage;
+    storming: Stage;
+    norming: NormingData;
+    performing: PerformingData;
+
+}
+
+export interface NormingData{
+
+}
+
+export interface PerformingData{
+
+}
+
 export interface Stage{
-    name:string;
     isLocked: boolean;
     complete: number;
     tasks: StageTask[];
@@ -9,14 +24,40 @@ export interface Stage{
 export interface StageTask{
     name: string;
     description: string;
-    complete: number
+    complete: number;
+}
+
+export enum StageNames{
+    FORMING = "FORMING",
+    STORMING = "STORMING",
 }
 
 export enum StagesActionTypes{
     ADDTASK = "ADDTASK",
     SETTASKCOMLETE = "SETTASKCOMLETE",  
 
-    ADDSTAGE = "",
     UNLOCKSTAGE = "UNLOCKSTAGE",
     SETSTAGECOMPLETE = "SETSTAGECOMPLETE",
 }
+
+export interface AddTaskAction{
+    type:StagesActionTypes.ADDTASK;
+    payload: {task: StageTask, stagename: StageNames}
+}
+
+export interface SetTaskCompleteAction{
+    type: StagesActionTypes.SETTASKCOMLETE
+    payload: {stageName: StageNames, taskName: string, complete: number}
+}
+
+export interface UnlockStageAction{
+    type: StagesActionTypes.UNLOCKSTAGE,
+    payload: {stage: StageNames}
+}
+
+export interface SetStageCompleteAction{
+    type: StagesActionTypes.SETSTAGECOMPLETE
+    payload: {stage: StageNames, complete: number}
+}
+
+export type StagesAction = AddTaskAction | SetTaskCompleteAction | UnlockStageAction |SetStageCompleteAction;

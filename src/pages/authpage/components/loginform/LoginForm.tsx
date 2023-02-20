@@ -17,7 +17,7 @@ const LoginForm = () => {
     const navigate = useNavigate();
     useEffect(()=>{
         if(auth.isAuth){
-            navigate("/fourstage");
+            navigate("/twocards");
         }
     })
 
