@@ -1,8 +1,59 @@
-.SecondPage{
-    background-color: aqua;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+.SecondPageWrapper {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 100px 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 30px 30px 300px 300px;
+    background-image: url(./components/cats_pattern.jpg);
+    background-size: contain;
 }
+
+.SecondPageWrapperHeading {
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 5;
+    grid-column-end: 8;
+    background-color: lightcoral;
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.SecondPageWrapperExitButton{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 6;
+    background-color: lightblue;
+    border-radius: 20px;
+    
+}
+
+.SecondPageWrapperExitButton:hover {
+    background-color: lightcoral;
+    transition: 1s;
+}
+
+.SecondPageWrapperToMainButton{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-row-start: 3;
+    grid-column-start: 6;
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+
+.SecondPageWrapperToMainButton:hover {
+    background-color: lightblue;
+    transition: 1s;
+}
+
+
+
+

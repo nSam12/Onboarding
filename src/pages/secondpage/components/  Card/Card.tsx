@@ -6,7 +6,7 @@ export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Card = ({children, ...other}: CardProps) => {
-    return <div style ={{border: '2px solid red'}} {...other}>
+    return <div style ={{border: '2px solid black'}} {...other}>
         {children}
     </div>
 }

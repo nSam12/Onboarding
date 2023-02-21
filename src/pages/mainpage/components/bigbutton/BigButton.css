@@ -17,9 +17,9 @@
     font-size: 35px;
     border: 2px solid black;
     border-radius: 150px;
+    margin-bottom: 30px;
 }
 .BigButton:hover{
     background-color: lightcoral;
     transition: 1s;
-
 }
