@@ -1,4 +1,4 @@
-
+import "./GeneralCard.css";
 export interface GeneralCardProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode,
     stageName?: string,
@@ -6,10 +6,16 @@ export interface GeneralCardProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const GeneralCard = ({children, stageName, description, ...other}: GeneralCardProps) =>{
-    return <div style ={{border: '2px solid green'}} {...other}>
-        <h1>{stageName}</h1>
-        <h4>{description}</h4>
-        {children}
+    return <div {...other}>
+        <div className="FormCatBox">
+        </div>
+        <div className="FormCatBoxDescription">
+            <h2>Стадия Форминга</h2>
+            <h3>Начни свой путь в компании</h3>
+        </div>
+        <div className="FormingCatBoxComplete">
+            <h3>Пройдено: 0</h3>
+        </div>
     </div>
 }
 

@@ -1,0 +1,23 @@
+.FourStagesPageWrapper {
+    display: grid;
+    grid-template-rows: 200px  1fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 50px;
+    background-image: url(../mainpage/components/cats_pattern.jpg);
+    background-size: contain;
+}
+
+.FourStagesPageWrapperHeadingBox {
+    height: 80px;
+    margin-top: 60px;
+    background-color: lightcoral;
+    display: grid;
+    grid-row-start: 1;
+    grid-column-start: 4;
+    grid-column-end: 10;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

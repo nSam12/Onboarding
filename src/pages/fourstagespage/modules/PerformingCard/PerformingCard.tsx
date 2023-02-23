@@ -1,7 +1,8 @@
 import GenearalCard from "../GeneralCard/GeneralCard";
+import "./PerformingCard.css"
 
 const PerformingCard = ({...other}) =>{
-    return <GenearalCard {...other}>
+    return <GenearalCard {...other} className="PerformingCardBox">
         
     </GenearalCard>;
 }
