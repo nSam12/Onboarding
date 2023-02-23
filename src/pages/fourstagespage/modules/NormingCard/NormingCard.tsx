@@ -1,7 +1,9 @@
-import GenearalCard from "../GeneralCard/GeneralCard";
+import GenearalCard, { StageNames } from "../GeneralCard/GeneralCard";
+import "./NormingCard.css"
+
 
 const NormingCard = ({...other}) =>{
-    return <GenearalCard {...other}>
+    return <GenearalCard {...other} className="NormingCardBox" stageName={StageNames.NORMING}>
         
     </GenearalCard>;
 }

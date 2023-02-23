@@ -1,0 +1,9 @@
+.StormingCardBox {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 7;
+    grid-column-end: 10;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+}

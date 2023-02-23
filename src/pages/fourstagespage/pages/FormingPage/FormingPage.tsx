@@ -15,7 +15,7 @@ const FormingPage = () => {
     return (
         <div>
             <Header></Header>
-            <h1> ФОРМИНГ </h1>
+            <h2>ФОРМИНГ</h2>
             <h2> ОПИСАНИЕ ФОРМИНГА</h2>
             <h4> Пройдено {forming.complete}</h4>
             <ul>{ListItem}</ul>
