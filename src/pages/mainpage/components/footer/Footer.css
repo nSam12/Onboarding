@@ -1,13 +1,23 @@
-.Footer{
-    margin-top: 0 px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: lightblue;
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid rgb(0, 0, 0);
+.Footer { 
+    display: grid;
+    grid-template-columns: 150px 1fr 150px;
+    grid-template-rows: 250px;
+    background-color: black;
+    margin-top: 30px;
 }
+
+.FooterContent {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.FooterContentInfo {
+    text-decoration: underline;
+}
+ 
