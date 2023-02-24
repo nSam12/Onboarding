@@ -22,6 +22,11 @@ export interface Stage{
     tasks: StageTask[];
 }
 
+export interface Module{
+    isLocked: boolean;
+    complete: number;
+}
+
 export interface StageTask{
     name: string;
     description: string;

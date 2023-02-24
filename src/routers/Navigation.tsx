@@ -9,6 +9,14 @@ import FourStagesPage from "../pages/fourstagespage/FourStagesPage";
 import DocPage from "../pages/DocPage/DocPage";
 import FormingPage from "../pages/fourstagespage/pages/FormingPage/FormingPage";
 import StormingPage from "../pages/fourstagespage/pages/StormingPage/StormingPage";
+import CultureArticle from "../pages/DocPage/Articles/GultureArticles/CultureArticle";
+import ArticleBox from "../pages/DocPage/modules/ArticleBox/ArticleBox";
+import { Outlet } from "react-router-dom";
+import GeneralAboutCompany from "../pages/DocPage/Articles/GeneralAboutCompany/GeneralAvoutCompany";
+import MyDepartment from "../pages/DocPage/Articles/MyDepartment/MyDepartment";
+import OfficePlan from "../pages/DocPage/Articles/OfficePlan/OfficePlan";
+import TechnicalDetails from "../pages/DocPage/Articles/TechnicalDetails/ TechnicalDatails";
+import WorkProcess from "../pages/DocPage/Articles/WorkProcess/WorkProcess";
 
 const Navigation = () => {
     const auth = useTypedSelector((state) => state.auth);
@@ -39,7 +47,16 @@ const Navigation = () => {
                     <PrivateRoute isAuth={auth.isAuth} component={DocPage} />
                 }
                 path="/docs"
+
             />
+            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={GeneralAboutCompany} />} path="/docs/general" />
+            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={CultureArticle} />} path="/docs/culture" />
+            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={MyDepartment} />} path="/docs/mydepartment" />
+            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={OfficePlan} />} path="/docs/officeplan" />
+            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={CultureArticle} />} path="/docs/culture" />
+            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={TechnicalDetails} />} path="/docs/technical" />
+            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={WorkProcess} />} path="/docs/work" />
+            
 
             <Route
                 element={
