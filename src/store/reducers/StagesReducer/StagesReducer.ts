@@ -4,6 +4,7 @@ import {
     SetStageCompleteAction,
     SetTaskCompleteAction,
     StageNames,
+    Stage,
     Stages,
     StagesAction,
     StagesActionTypes,
@@ -41,7 +42,6 @@ const Person2: Person = {
     department: frontendTeam,
 };
 
-
 const initialState: Stages = {
     forming: {
         isLocked: true,
@@ -70,10 +70,15 @@ const initialState: Stages = {
                 name: "Починить баг",
                 description: "Где-то есть баг",
                 complete: 15,
-                longDescription: "Найти баг на странице с товарами, там почему-то всё маргает и мигает, а на самом деле не должно",
-                author:Person2
+                longDescription:
+                    "Найти баг на странице с товарами, там почему-то всё маргает и мигает, а на самом деле не должно",
+                author: Person2,
             },
-            { name: "задание3", description: "моковое задание для 3 пункта в списке", complete: 87 },
+            {
+                name: "задание3",
+                description: "моковое задание для 3 пункта в списке",
+                complete: 87,
+            },
         ],
     },
     norming: {},
@@ -84,14 +89,14 @@ export const StagesReducer = (
     state: Stages = initialState,
     action: StagesAction
 ): Stages => {
-    console.log("StageReducer", action.type)
+    console.log("StageReducer", action.type);
     switch (action.type) {
         case StagesActionTypes.ADDTASK:
             return addTaskCase(state, action);
         case StagesActionTypes.SETTASKCOMLETE:
             //console.log("$$$$$")
             return setTaskCompleteCase(state, action);
-         
+
         case StagesActionTypes.UNLOCKSTAGE:
             return unlockStageCase(state, action);
         case StagesActionTypes.SETSTAGECOMPLETE:
@@ -105,14 +110,13 @@ const SetStageCompleteCase = (
     state: Stages,
     action: SetStageCompleteAction
 ): Stages => {
-    
     if (action.payload.stage === StageNames.FORMING) {
         return {
             ...state,
             forming: { ...state.forming, complete: action.payload.complete },
         };
     } else if (action.payload.stage === StageNames.STORMING) {
-        console.log("Stage Red SetTaskComplete Case")
+        console.log("Stage Red SetTaskComplete Case");
         return {
             ...state,
             storming: { ...state.storming, complete: action.payload.complete },
@@ -158,19 +162,23 @@ const setTaskCompleteCase = (
     state: Stages,
     action: SetTaskCompleteAction
 ): Stages => {
-    console.log("!!!", action)
-    console.log(state)
-    console.log(action.payload.taskName)
-    const tmptask: StageTask | undefined = state.forming.tasks.find(
-        (elem:StageTask) => {if(elem.name === action.payload.taskName){
-            
-        }}
+    console.log("!!!", action);
+    console.log(state);
+    console.log(action.payload.taskName);
+    const tmptask: StageTask | undefined = state.storming.tasks.find(
+        (elem: StageTask) => {
+            if (elem.name === action.payload.taskName) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     );
     if (tmptask === undefined) {
-        console.log("Bad case")
+        console.log("Bad case");
         return state;
     }
-    console.log("next")
+    console.log("next");
     if (action.payload.stageName === StageNames.FORMING) {
         return {
             ...state,
@@ -190,23 +198,21 @@ const setTaskCompleteCase = (
             },
         };
     } else if (action.payload.stageName === StageNames.STORMING) {
-        const ans = {
-            ...state,
-            storming: {
-                ...state.storming,
-                tasks: [
-                    ...state.storming.tasks.filter(
-                        (elem: StageTask) =>
-                            elem.name === action.payload.taskName
-                    ),
+        const tmparr = state.storming.tasks.filter((elem: StageTask) => {
+            if(elem.name !== tmptask.name){
+                return true;
+            }else{
+                return false;
+            }
+        });
+        const newTask = {...tmptask, complete : action.payload.complete};
+        //const ansArr = {...tmparr, newTask};
+        const ansArr = tmparr.concat(newTask);
 
-                    {
-                        ...tmptask,
-                        complete: action.payload.complete,
-                    },
-                ],
-            },
-        };
+        console.log("ARRAY", ansArr)
+        const ans = {...state, storming:{...state.storming, tasks:ansArr}}
+
+
         console.log("ANSWER", ans);
         return ans;
     } else {
