@@ -1,15 +1,49 @@
 .SecondPageWrapperStagesCard {
     display: grid;
-    border: 2px solid black;
-    grid-row-start: 4;
-    grid-column: 5 / span 3;
-    background-color: lightblue;
-    border-radius: 20px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 400px;
 }
 
-.SecondPageWrapperStagesCardHeading {
-    border: none;
+.SecondPageWrapperStagesCardImage {
     display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+}
+
+.SecondPageWrapperStagesCardImageItself {
+    background-image: url(./все\ коты\ для\ Сони\ \(вектор\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.SecondPageWrapperStagesCardCompleteBox {
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: 100px;
+    gap: 60px;
     justify-content: center;
     align-items: center;
 }
+
+.SecondPageWrapperStagesCardCompleteBoxButton {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.SecondPageWrapperStagesCardCompleteBoxButton:hover {
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+
+
+
+
+

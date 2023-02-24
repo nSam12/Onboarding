@@ -36,17 +36,22 @@ const LoginForm = () => {
 
     return (
         <div className="LoginForm">
-            <h1>Пожалуйста авторизуйтесь</h1>
-            <h1>  статус {String(auth.isAuth)} вот такой</h1>
-            <input
-                onChange={(e) => setEmail(e.target.value)}
-                type="text"
-                placeholder="введите логин"
-            />
-            <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="введите пароль" />
-            <button onClick={LoginSubmit}> Войти </button>
+            <h1 className="LoginFormHeading">Пожалуйста, авторизуйтесь</h1>
+            <div className="LoginFormInputBox">
+                <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="text"
+                    placeholder="введите логин"
+                    className="LoginFormInput"
+                />
+                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder="введите пароль" className="LoginFormInput"/>
+            </div>
+            <div className="LoginFormButtonBox">
+                <button onClick={LoginSubmit} className="LoginFormButton"> Войти </button>
+            </div>
         </div>
     );
 };
+
 
 export default LoginForm;

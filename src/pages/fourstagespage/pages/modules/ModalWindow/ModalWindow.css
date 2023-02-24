@@ -1,10 +1,53 @@
 .ModalWindow {
+    font-family: 'Montserrat', sans-serif;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    background: rgba(0,100,0, 0.7);
+    top: 100px;
+    bottom: 100px;
+    right: 100px;
+    left: 100px;
+    border-radius: 20px;
+    background-color: rgb(111, 166, 211);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
+
+.ModalWindowHeadings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.ModalWindowHeadingsContent {
+    font-size: 20px;
+}
+
+.ModalWindowButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 80px;
+}
+
+.ModalWindowButtonsThemselves {
+    height: 80px;
+    width: 240px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ModalWindowButtonsThemselves:hover {
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');

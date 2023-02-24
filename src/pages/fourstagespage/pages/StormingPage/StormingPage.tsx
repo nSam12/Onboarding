@@ -8,6 +8,7 @@ import { useTypedSelector } from "../../../../hooks/useTypedSelector";
 import TaskItem from "../modules/TaskItem/TaskItem";
 import { useState } from "react";
 import ModalWindow from "../modules/ModalWindow/ModalWindow";
+import "./StormingPage.css";
 
 const StormingPage = () => {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -52,6 +53,18 @@ const StormingPage = () => {
                     closeModal={CloseModal}
                 ></ModalWindow>
             )}
+
+            <div className="StormingPageBox">
+                <div className="StormingPageBoxHeadings">
+                    <h1> Шторминг </h1>
+                    <h2> Этап, на котором придётся засучить рукава!</h2>
+                    <h4> Выполнено заданий {stormingg.complete}</h4>
+                </div>
+                <div>
+                    <ul  className="StormingPageBoxItems">{ListItem}</ul>
+                    {isModalOpen && <ModalWindow task={taskForModal} closeModal={CloseModal}></ModalWindow>}`
+                </div>
+            </div>
 
             <Footer></Footer>
         </div>

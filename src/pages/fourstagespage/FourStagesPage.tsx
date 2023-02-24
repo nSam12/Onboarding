@@ -17,9 +17,6 @@ const FourStagesPage = () =>{
     return <div>
         <Header/>
         <div className="FourStagesPageWrapper">
-            <div className="FourStagesPageWrapperHeadingBox">
-                <h2>Это страница с 4 стадиями</h2>
-            </div>
             <FormingCard stageCatName = "форминга" description ="Начни свой путь в компании" stageCompelte ={stages.forming.complete} ></FormingCard>
             <StormingCard stageCatName = "шторминга" description ="Порабай с первыми задачами" stageCompelte ={stages.storming.complete}></StormingCard>
             <NormingCard stageCatName = "норминга" description = "Полноценно присоединяйся" stageCompelte ={0}></NormingCard>

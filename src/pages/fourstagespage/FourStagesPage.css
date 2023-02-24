@@ -1,16 +1,15 @@
 .FourStagesPageWrapper {
     display: grid;
-    grid-template-rows: 200px  1fr 1fr;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(12, 1fr);
     gap: 50px;
-    background-image: url(../mainpage/components/cats_pattern.jpg);
     background-size: contain;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .FourStagesPageWrapperHeadingBox {
     height: 80px;
     margin-top: 60px;
-    background-color: lightcoral;
     display: grid;
     grid-row-start: 1;
     grid-column-start: 4;
@@ -21,3 +20,6 @@
     justify-content: center;
     align-items: center;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
