@@ -1,3 +1,4 @@
+import { Department, JobTitle, Person } from "../../../Types/PeopleTypes";
 import {
     AddTaskAction,
     SetStageCompleteAction,
@@ -9,6 +10,37 @@ import {
     StageTask,
     UnlockStageAction,
 } from "./StagesReducerTypes";
+
+const Data1 = new Date("2023-09-32");
+const Data2 = new Date("2023-10-32");
+
+const manager: JobTitle = {
+    name: "Менеджер",
+    id: "1",
+};
+
+const frontendTeam: Department = {
+    name: "Команда фронтенд разработки",
+    id: "2",
+    rootDepartment: "2",
+};
+
+const Person1: Person = {
+    name: "Дмитрий",
+    surname: "Авокадовский",
+    secondName: "Игоревич",
+    jobTitle: manager,
+    department: frontendTeam,
+};
+
+const Person2: Person = {
+    name: "Григорий",
+    surname: "Яблоковский",
+    secondName: "Андреевич",
+    jobTitle: manager,
+    department: frontendTeam,
+};
+
 
 const initialState: Stages = {
     forming: {
@@ -24,9 +56,24 @@ const initialState: Stages = {
         isLocked: true,
         complete: 0,
         tasks: [
-            { name: "dsff", description: "bla-bla-bla", complete: 10 },
-            { name: "ffff", description: "bla-bla-bla", complete: 10 },
-            { name: "tttt", description: "bla-bla-bla", complete: 10 },
+            {
+                name: "Покрасить кнопки",
+                description: "Дизайн кнопок на старинице продаж",
+                complete: 10,
+                longDescription:
+                    "Нужно сделать красные кнопки, с зеленой рамкой и переливающиеся филоетовым цветом",
+                date: Data1,
+                deadline: Data2,
+                author: Person1,
+            },
+            {
+                name: "Починить баг",
+                description: "Где-то есть баг",
+                complete: 15,
+                longDescription: "Найти баг на странице с товарами, там почему-то всё маргает и мигает, а на самом деле не должно",
+                author:Person2
+            },
+            { name: "задание3", description: "моковое задание для 3 пункта в списке", complete: 87 },
         ],
     },
     norming: {},

@@ -11,12 +11,16 @@ export interface GeneralCardProps extends React.HTMLAttributes<HTMLDivElement> {
     children?: React.ReactNode;
     stageName?: StageNames;
     description?: string;
+    stageCatName?: string;
+    stageCompelte?: number;
 }
 
 const GeneralCard = ({
     children,
     stageName,
     description,
+    stageCatName,
+    stageCompelte,
     ...other
 }: GeneralCardProps) => {
     let pic = "";
@@ -44,11 +48,11 @@ const GeneralCard = ({
                 style={{ backgroundImage: `url("${pic}")` }}
             ></div>
             <div className="FormCatBoxDescription">
-                <h2>Стадия Форминга</h2>
-                <h3>Начни свой путь в компании</h3>
+                <h2>Стадия {stageCatName}</h2>
+                <h3> {description}</h3>
             </div>
             <div className="FormingCatBoxComplete">
-                <h3>Пройдено: 0</h3>
+                <h3>Пройдено: {stageCompelte}</h3>
             </div>
         </div>
     );

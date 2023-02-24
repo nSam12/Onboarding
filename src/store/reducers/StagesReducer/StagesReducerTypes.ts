@@ -1,3 +1,4 @@
+import { Person } from "../../../Types/PeopleTypes";
 
 export interface Stages{
     forming: Stage;
@@ -25,6 +26,10 @@ export interface StageTask{
     name: string;
     description: string;
     complete: number;
+    author?: Person;
+    date?: Date;
+    longDescription?: string;
+    deadline?: Date;
 }
 
 export enum StageNames{
