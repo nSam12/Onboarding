@@ -1,0 +1,84 @@
+.CatsStagesBox {
+    display: grid;
+    grid-template-rows: repeat(4, 500px);
+}
+
+.CatsStageBoxForm {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.CatsStageBoxFormImage {
+    background-image: url(./form_cat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.CatsStageBoxFormText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color:rgb(111, 32, 207);
+}
+
+.CatsStageBoxStorm {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+
+.CatsStageBoxStormImage {
+    background-image: url(./storm_cat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.CatsStageBoxStormText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: rgb(111, 166, 211);
+    
+}
+
+.CatsStageBoxNorm {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+}
+
+.CatsStageBoxNormImage {
+    background-image: url(./norm_cat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.CatsStageBoxNormText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: rgb(21, 100, 21);
+}
+
+.CatsStageBoxPerform {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+
+.CatsStageBoxPerformImage {
+    background-image: url(./perform_cat.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.CatsStageBoxPerformText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    color: rgb(19, 19, 172);
+}
+
+
+

@@ -1,0 +1,27 @@
+.OnboardingDescriptionBox {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 300px;
+    margin-bottom: 100px;
+}
+
+.OnboardingDescriptionBoxLeft {
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    justify-items: start;
+    align-items: center;
+}
+
+.OnboardingDescriptionBoxLeftHeading {
+    font-size: 50px;
+}
+
+.OnboardingDescriptionBoxLeftContent {
+    font-size: 25px;
+}
+
+.OnboardingDescriptionBoxRight {
+    background-image: url(./lupa.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}

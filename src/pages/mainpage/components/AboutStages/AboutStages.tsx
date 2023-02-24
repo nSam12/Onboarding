@@ -1,13 +1,22 @@
-import Description from "../description/Description";
-import LogoName from "../logoName/LogoName";
 import "./AboutStages.css";
 
 const AboutStages = () => {
     return (
-        <div className="AboutStages">
-            <h3 className="AboutStageHeading"> композиция из всех 5 котов</h3>
-            <LogoName/>
-            <Description/>
+        <div className="AboutOnboarding">
+            <div className="AboutOnboardingLeftBox">
+            </div>
+            <div className="AboutOnboardingRightBox">
+                <div className="AboutOnboardingRightBoxHeadingTop">
+                    <h1 className="AboutOnboardingRightBoxHeadingTopContent">CATS – ON BOARD!</h1>
+                </div>
+                <div className="AboutOnboardingRightBoxHeadingMiddle">
+                    <div>
+                        ТВОЙ ЛИЧНЫЙ СЕРВИС <br />
+                        ПО АДАПТАЦИИ <br />
+                        НА <b>НОВОМ РАБОЧЕМ МЕСТЕ!</b>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

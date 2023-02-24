@@ -1,12 +1,9 @@
-.MainPage{
-    background-color: azure;
-    justify-content: center;
-    background-image: url(./components/cats_pattern.jpg);
-    background-size: contain;
+.MainPage {
+    font-family: 'Montserrat', sans-serif;
 }
 
-.background {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
-    background-size: contain;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+    
+
+

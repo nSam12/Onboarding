@@ -27,16 +27,16 @@ const GeneralCard = ({
 
     switch (stageName) {
         case StageNames.FORMING:
-            pic = require("/home/sam/Demo projects/onboard/src/pages/fourstagespage/Cat_Form.jpg");
+            pic = require("../../Cat_Form.jpg");
             break;
         case StageNames.STORMING:
-            pic = require("/home/sam/Demo projects/onboard/src/pages/fourstagespage/Cat_Storm.jpg");
+            pic = require("../../Cat_Storm.jpg");
             break;
         case StageNames.NORMING:
-            pic = require("/home/sam/Demo projects/onboard/src/pages/fourstagespage/Cat_Norm.jpg");
+            pic = require("../../Cat_Norm.jpg");
             break;
         case StageNames.PERFORMING:
-            pic = require("/home/sam/Demo projects/onboard/src/pages/fourstagespage/Cat_Perform.jpg");
+            pic = require("../../Cat_Perform.jpg");
             break;
     }
 

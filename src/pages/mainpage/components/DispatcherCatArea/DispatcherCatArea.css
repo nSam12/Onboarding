@@ -1,0 +1,45 @@
+.DispatcherCatAreaHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    font-size: 30px;
+}
+
+.DispatcherCatAreaBox {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 500px;
+}
+
+.DispatcherCatAreaBoxImage {
+    background-image: url(./Кот-диспетчер\ \(зеркалка\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+
+.DispatcherCatAreaBoxContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DispatcherCatAreaBoxContentButton {
+    height: 150px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.DispatcherCatAreaBoxContentButton:hover {
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+

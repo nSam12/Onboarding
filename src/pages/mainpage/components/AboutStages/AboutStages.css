@@ -1,20 +1,38 @@
-.AboutStages{
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px; 
+* {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
 }
 
-.AboutStageHeading {
-    margin-top: 30px;
-    border: 2px solid black;
-    border-radius: 350px;
-    background-color: lightcoral;
-    height: 300px;
-    width: 700px;
+.AboutOnboarding {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 750px;
+}
+
+.AboutOnboardingLeftBox {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(./cats_together.png);
+    background-position: center 50% center 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
+
+.AboutOnboardingRightBox {
+    display: grid;
+    grid-template-rows: 200px 400px;
+    align-items: center;
+}
+
+.AboutOnboardingRightBoxHeadingTopContent {
+    font-size: 65px;
+}
+
+.AboutOnboardingRightBoxHeadingMiddle {
+    display: grid;
+    align-items: center;
+    font-size: 50px;
+    height: 650px;
+}
+

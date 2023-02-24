@@ -1,13 +1,41 @@
-.Header{
-    border: 2px solid rgb(0, 0, 0);
-    height: 120px;
+* {
+    text-decoration: none;
+}
+
+.Header {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    display: grid;
+    grid-template-rows: 120px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.HeaderLogoBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url(./logotip.png);
+    background-repeat: center 50% left 0px;
+    background-repeat: no-repeat;
+}
+
+.HeaderElseBox {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: lightblue;
 }
 
-.main_page_navigation_bar_elements {
+.HeaderElseBoxButton {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(111, 166, 211);
+}
+
+.HeaderElseBoxButtonLink {
     color: black;
-    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
