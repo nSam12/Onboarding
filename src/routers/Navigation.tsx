@@ -53,7 +53,6 @@ const Navigation = () => {
             <Route element={ <PrivateRoute isAuth={auth.isAuth} component={CultureArticle} />} path="/docs/culture" />
             <Route element={ <PrivateRoute isAuth={auth.isAuth} component={MyDepartment} />} path="/docs/mydepartment" />
             <Route element={ <PrivateRoute isAuth={auth.isAuth} component={OfficePlan} />} path="/docs/officeplan" />
-            <Route element={ <PrivateRoute isAuth={auth.isAuth} component={CultureArticle} />} path="/docs/culture" />
             <Route element={ <PrivateRoute isAuth={auth.isAuth} component={TechnicalDetails} />} path="/docs/technical" />
             <Route element={ <PrivateRoute isAuth={auth.isAuth} component={WorkProcess} />} path="/docs/work" />
             

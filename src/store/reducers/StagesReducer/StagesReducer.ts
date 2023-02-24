@@ -84,11 +84,14 @@ export const StagesReducer = (
     state: Stages = initialState,
     action: StagesAction
 ): Stages => {
+    console.log("StageReducer", action.type)
     switch (action.type) {
         case StagesActionTypes.ADDTASK:
             return addTaskCase(state, action);
         case StagesActionTypes.SETTASKCOMLETE:
+            //console.log("$$$$$")
             return setTaskCompleteCase(state, action);
+         
         case StagesActionTypes.UNLOCKSTAGE:
             return unlockStageCase(state, action);
         case StagesActionTypes.SETSTAGECOMPLETE:
@@ -102,12 +105,14 @@ const SetStageCompleteCase = (
     state: Stages,
     action: SetStageCompleteAction
 ): Stages => {
+    
     if (action.payload.stage === StageNames.FORMING) {
         return {
             ...state,
             forming: { ...state.forming, complete: action.payload.complete },
         };
     } else if (action.payload.stage === StageNames.STORMING) {
+        console.log("Stage Red SetTaskComplete Case")
         return {
             ...state,
             storming: { ...state.storming, complete: action.payload.complete },
@@ -153,13 +158,19 @@ const setTaskCompleteCase = (
     state: Stages,
     action: SetTaskCompleteAction
 ): Stages => {
+    console.log("!!!", action)
+    console.log(state)
+    console.log(action.payload.taskName)
     const tmptask: StageTask | undefined = state.forming.tasks.find(
-        (elem) => elem.name === action.payload.taskName
+        (elem:StageTask) => {if(elem.name === action.payload.taskName){
+            
+        }}
     );
     if (tmptask === undefined) {
+        console.log("Bad case")
         return state;
     }
-
+    console.log("next")
     if (action.payload.stageName === StageNames.FORMING) {
         return {
             ...state,
@@ -179,7 +190,7 @@ const setTaskCompleteCase = (
             },
         };
     } else if (action.payload.stageName === StageNames.STORMING) {
-        return {
+        const ans = {
             ...state,
             storming: {
                 ...state.storming,
@@ -196,6 +207,8 @@ const setTaskCompleteCase = (
                 ],
             },
         };
+        console.log("ANSWER", ans);
+        return ans;
     } else {
         return state;
     }
