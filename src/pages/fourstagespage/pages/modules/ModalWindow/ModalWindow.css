@@ -50,4 +50,8 @@
     box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
 }
 
+.ModalWindowButtonsThemselves:not(:hover) {
+    transition: 500ms;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');

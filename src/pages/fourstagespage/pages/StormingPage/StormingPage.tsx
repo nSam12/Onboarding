@@ -42,30 +42,17 @@ const StormingPage = () => {
     console.log("IN STORMING", list);
     return (
         <div>
-            <Header></Header>
-            <h1> ШтОРМИНГ </h1>
-            <h2> ОПИСАНИЕ ШТОРМИНГА</h2>
-            <h4> Пройдено {stormingg.complete}</h4>
-            <ul>{list}</ul>
-            {isModalOpen && (
-                <ModalWindow
-                    task={taskForModal}
-                    closeModal={CloseModal}
-                ></ModalWindow>
-            )}
-
+            <Header/>
             <div className="StormingPageBox">
                 <div className="StormingPageBoxHeadings">
-                    <h1> Шторминг </h1>
+                    <div className="StormingPageBoxHeadingsImage"></div>
+                    <h1 className="StormingPageBoxHeadingsMainHeading"> Шторминг </h1>
                     <h2> Этап, на котором придётся засучить рукава!</h2>
-                    <h4> Выполнено заданий {stormingg.complete}</h4>
+                    <h4> Выполнено заданий: {stormingg.complete}</h4>
                 </div>
-                <div>
-                    <ul  className="StormingPageBoxItems">{ListItem}</ul>
-                    {isModalOpen && <ModalWindow task={taskForModal} closeModal={CloseModal}></ModalWindow>}`
-                </div>
+                <ul className="StormingPageBoxItems">{list}</ul>
+                {isModalOpen && <ModalWindow task={taskForModal} closeModal={CloseModal}></ModalWindow>}`
             </div>
-
             <Footer></Footer>
         </div>
     );
