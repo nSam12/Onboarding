@@ -10,9 +10,16 @@ const StagesCard = () => {
     const navigate = useNavigate();
     return (
         <Card onClick={()=>{navigate("/fourstages")}} className="SecondPageWrapperStagesCard">
-            <h1 className="SecondPageWrapperStagesCardHeading">Карточка со стадиями</h1>
-            <h2 className="SecondPageWrapperStagesCardHeading"> Пройдено в forming {String(stages.forming.complete)}</h2>
-            <h2 className="SecondPageWrapperStagesCardHeading"> Пройдено в storming {String(stages.storming.complete)}</h2>
+            <div className="SecondPageWrapperStagesCardImage">
+                <div></div>
+                <div className="SecondPageWrapperStagesCardImageItself"></div>
+                <div></div>
+            </div>
+            <div className="SecondPageWrapperStagesCardCompleteBox">
+                <button className="SecondPageWrapperStagesCardCompleteBoxButton">
+                   Пройдено этапов: {String(stages.forming.complete)}
+                </button>
+            </div>
         </Card>
     );
 };

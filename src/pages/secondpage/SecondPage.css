@@ -1,59 +1,75 @@
+.SecondPage {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.SecondPageBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 600px 400px;
+    border: none;
+}
+
+.SecondPageWrapperStagesCardCompleteBoxLeft {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
 .SecondPageWrapper {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 100px 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 30px 30px 300px 300px;
-    background-image: url(./components/cats_pattern.jpg);
-    background-size: contain;
+    height: 300px;
 }
 
-.SecondPageWrapperHeading {
-    margin-top: 30px;
+.SecondPageWrapperButtonArea {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.SecondPageWrapperExitButton {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 5;
-    grid-column-end: 8;
-    background-color: lightcoral;
-    border: 2px solid black;
-    font-size: 20px;
+    height: 100px;
+    width: 200px;
     border-radius: 20px;
-}
-
-.SecondPageWrapperExitButton{
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 6;
-    background-color: lightblue;
-    border-radius: 20px;
-    
+    background-color: rgba(230, 227, 244, 0.867);
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
 }
 
 .SecondPageWrapperExitButton:hover {
-    background-color: lightcoral;
-    transition: 1s;
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
 }
 
-.SecondPageWrapperToMainButton{
+
+.SecondPageWrapperToMainButton {
+    display: grid;
     justify-content: center;
     align-items: center;
-    display: grid;
-    grid-row-start: 3;
-    grid-column-start: 6;
-    background-color: lightcoral;
+    height: 100px;
+    width: 200px;
     border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
 }
 
 .SecondPageWrapperToMainButton:hover {
-    background-color: lightblue;
-    transition: 1s;
-}
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+} 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 
 

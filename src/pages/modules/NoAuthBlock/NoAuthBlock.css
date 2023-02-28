@@ -1,0 +1,59 @@
+.NoAuthBlockBox {
+    display: grid;
+    grid-template-rows: 400px 100px;
+}
+
+.NoAuthBlockBoxImageBox {
+    display: grid;
+    grid-template-rows: 400px;
+    grid-template-columns: 1fr 200px 1fr;
+}
+
+.NoAuthBlockBoxImageBoxImage {
+    background-image: url(./Кот-диспетчер\ \(зеркалка\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.NoAuthBlockBoxImageBoxHeadingBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.NoAuthBlockBoxImageBoxHeading {
+    display: inline-block;
+    font-size: 35px;
+}
+
+.NoAuthBlockBoxButtonBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.NoAuthBlockBoxButtonBoxButton {
+    height: 100px;
+    width: 300px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.NoAuthBlockBoxButtonBoxButton:hover {
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+
+.NoAuthBlockBoxButtonBoxButton:not(:hover) {
+    transition: 500ms;
+  }
+

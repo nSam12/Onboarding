@@ -1,0 +1,57 @@
+.StormingPageBox {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: 600px 700px;
+  }
+  
+  .StormingPageBoxHeadings {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+  }
+
+  .StormingPageBoxHeadingsMainHeading {
+    font-size: 40px;
+    color: rgb(111, 166, 211);
+  }
+
+  .StormingPageBoxHeadingsImage {
+    height: 300px;
+    width: 200px;
+    background-image: url(./Cat_Storm.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .ListItemsBoxBox {
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  .ListItemsBoxBox:hover {
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+
+.ListItemsBoxBox:not(:hover) {
+    transition: 500ms;
+  }
+
+ .StormingPageBoxItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+
+
+  
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');

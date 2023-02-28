@@ -40,19 +40,22 @@ const SecondPage = () => {
         <div className="SecondPage">
             {" "}
             <Header/>
-            <div className="SecondPageWrapper">
-                <h1 className="SecondPageWrapperHeading">{String(auth.user.name) + " " +String(auth.user.id) + " "+ String(auth.user.email)}</h1>
-                <button onClick={LogoutFunction} className="SecondPageWrapperExitButton"> Выйти </button>
-                <button
-                    onClick={() => {
-                        navigate("/");
-                    }} className="SecondPageWrapperToMainButton"
-                >
-                    На главную
-                </button>
-
+            <div className="SecondPageBox">
                 <StagesCard></StagesCard>
                 <DispatcherCard></DispatcherCard>
+                <div className="SecondPageWrapper">
+                    <h1 className="SecondPageWrapperHeading">{String(auth.user.name) + " " +String(auth.user.id) + " "+ String(auth.user.email)}</h1>
+                    <div className="SecondPageWrapperButtonArea">
+                        <button onClick={LogoutFunction} className="SecondPageWrapperExitButton"> Выйти </button>
+                        <button
+                            onClick={() => {
+                                navigate("/");
+                            }} className="SecondPageWrapperToMainButton"
+                        >
+                            На главную
+                        </button>
+                    </div>
+                </div>
             </div>
             <Footer/>
         </div>
