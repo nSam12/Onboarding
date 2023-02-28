@@ -4,15 +4,26 @@ import CultureArticle from "./Articles/GultureArticles/CultureArticle";
 import NavButton from "./modules/NavButton/NavButton";
 import { Outlet } from "react-router-dom";
 import NavBar from "./modules/NavBar/NavBar";
+import "./DockPage.css"
 
 const DocPage = () => {
     return (
         <div>
             <Header />
-            <input type="text" placeholder="Что ищу..."></input>
-            <h1>Страница кота диспетчера</h1>
-            <NavBar></NavBar>
-            
+            <div className="DockPageBox">
+                <div className="DockPageBoxImage">
+                    <div className="DockPageBoxImageItself"></div>
+                </div>
+                <div className="DockPageBoxHeading">
+                    <h1 className="DockPageBoxHeadingitself">Личный центр управления полётами</h1>
+                </div>
+                <div className="DockPageBoxInputArea">
+                    <input type="text" placeholder="Что ищу..." className="DockPageBoxInputAreaItself"></input>
+                </div>
+                <div className="DockPageBoxNavBar">
+                    <NavBar></NavBar>
+                </div>
+            </div>
             <Footer />
         </div>
     );

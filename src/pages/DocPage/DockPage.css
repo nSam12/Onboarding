@@ -1,0 +1,42 @@
+.DockPageBox {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-rows: 300px 100px 50px 550px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.DockPageBoxImage {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+}
+
+.DockPageBoxImageItself {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url(./Кот-диспетчер\ \(зеркалка\).png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.DockPageBoxHeading {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DockPageBoxInputArea {
+    display: grid;
+    grid-template-columns: 1fr 300px 1fr;
+}
+
+.DockPageBoxInputAreaItself {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    box-sizing: border-box;
+    padding-left: 15px;
+    border-radius: 20px;
+}
+
