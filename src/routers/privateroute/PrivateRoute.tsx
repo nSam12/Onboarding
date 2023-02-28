@@ -1,4 +1,3 @@
-import { Navigate, Route } from "react-router-dom";
 import NoAuthBlock from "../../pages/modules/NoAuthBlock/NoAuthBlock";
 
 export interface PrivateRouteProps{
@@ -9,7 +8,6 @@ export interface PrivateRouteProps{
 }
 
 const PrivateRoute:React.FC<PrivateRouteProps> = ({component: RouteComponent, isAuth}) => {
-    console.log("in private router", isAuth)
     if(isAuth){
         return <RouteComponent/>;
     }

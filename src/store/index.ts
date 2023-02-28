@@ -12,6 +12,5 @@ import { composeWithDevTools } from "redux-devtools-extension";
 export const sagaMiddleware = createSagaMiddleware()
 
 export const basestore = createStore(rootReducer, composeWithDevTools(applyMiddleware(sagaMiddleware)));
-//export const basestore = configureStore<any>({reducer:  rootReducer, middleware?:sagaMiddleware});
 
 sagaMiddleware.run(authWatcher)

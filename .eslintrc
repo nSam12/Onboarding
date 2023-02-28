@@ -16,7 +16,11 @@
             "prefer-double"
         ],
         "indent": [
-            2, 4, {"SwitchCase": 1}
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
         ],
         "max-len": [
             "warn",
@@ -24,15 +28,9 @@
                 "code": 200
             }
         ],
-
         "semi": [
             "warn",
             "always"
-        ],
-        "import/order": [
-            "warn",
-            {}
-        ],
-        
+        ]
     }
 }
