@@ -8,6 +8,7 @@ import Footer from "../../../mainpage/components/footer/Footer";
 import Header from "../../../mainpage/components/header/Header";
 import QuestionModal from "../modules/QuestionModal/QuestionModal";
 import TaskItem from "../modules/TaskItem/TaskItem";
+import "./FormingPage.css"
 
 const FormingPage = () => {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -21,11 +22,20 @@ const FormingPage = () => {
     return (
         <div>
             <Header></Header>
-            <h2>ФОРМИНГ</h2>
-            <h2> ОПИСАНИЕ ФОРМИНГА</h2>
-            <h4> Пройдено {forming.complete}</h4>
-            <button onClick={()=>{setModalOpen(true)}}>Пройти пульс-опрос</button>
-            <div>{isModalOpen&& <QuestionModal closeModal = {CloseModal}></QuestionModal>}</div>
+            <div className="FormingPageTopBox">
+                <div className="FormingPageTopBoxImageBox">
+                    <div className="FormingPageTopBoxImageBoxItself"></div>
+                </div>
+                <div className="FormingPageMiddleBox">
+                    <h2 className="FormingPageMiddleBoxHeading">ФОРМИНГ</h2>
+                    <h2> Твоё плавное начало новой работы</h2>
+                    <h4> Пройдено: {forming.complete}</h4>
+                </div>
+            </div>
+            <div className="FormingPageBottomBox">
+                <button onClick={()=>{setModalOpen(true)}} className="FormingPageBottomBoxButton">Пройти пульс-опрос</button>
+                <div>{isModalOpen&& <QuestionModal closeModal = {CloseModal}></QuestionModal>}</div>
+            </div>
             <Footer></Footer>
         </div>
     );

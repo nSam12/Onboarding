@@ -1,1 +1,69 @@
+.FormingPageTopBox {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 200px;
+}
+
+.FormingPageTopBoxImageBox {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+}
+
+.FormingPageTopBoxImageBoxItself {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url(./Cat_Form.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.FormingPageMiddleBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.FormingPageMiddleBoxHeading {
+    font-size: 40px;
+    color:rgb(111, 32, 207);
+}
+
+.FormingPageBottomBox {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+
+.FormingPageBottomBoxButton {
+    display: grid;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-content: center;
+    align-content: center;
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.FormingPageBottomBoxButton:hover {
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+
+.FormingPageBottomBoxButton:not(:hover) {
+    transition: 500ms;
+}
+
 
