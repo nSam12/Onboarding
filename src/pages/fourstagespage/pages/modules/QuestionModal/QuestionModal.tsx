@@ -41,9 +41,6 @@ const QuestionModal = (props:any) => {
     const Questions: Questions = Q;
     return (
         <div className="QuestionModal">
-            <div className="QuestionModalHeading">
-                <h1 className="QuestionModalHeading">{Questions.name}</h1>
-            </div>
             <QuestionsForm questions={Q} closeModal={props.closeModal} ></QuestionsForm>
         </div>
     );

@@ -11,6 +11,9 @@ const DocPage = () => {
         <div>
             <Header />
             <div className="DockPageBox">
+                <div className="DockPageBoxNavBarBox">
+                    <NavBar></NavBar>
+                </div>
                 <div className="DockPageBoxImage">
                     <div className="DockPageBoxImageItself"></div>
                 </div>
@@ -19,9 +22,6 @@ const DocPage = () => {
                 </div>
                 <div className="DockPageBoxInputArea">
                     <input type="text" placeholder="Что ищу..." className="DockPageBoxInputAreaItself"></input>
-                </div>
-                <div className="DockPageBoxNavBar">
-                    <NavBar></NavBar>
                 </div>
             </div>
             <Footer />

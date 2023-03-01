@@ -1,81 +1,8 @@
 .NavBarBox {
     margin-top: 30px;
-    margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 100px);
-}
-
-.NavBarBoxCompanyOverview {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.NavBarBoxCompanyCulture {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 3;
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-
-.NavBarBoxMyDepartment {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 1;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.NavBarBoxOfficePlan {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 1;
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-
-.NavBarBoxProjectDocumentationOverview {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 2;
-    grid-column-start: 3;
-    grid-column-end: 4;
-}
-
-.NavBarBoxWOrkFlowDescription {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-}
-
-.NavBarBoxDispatcherTheCatPage {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 4;
-    grid-column-start: 2;
-    grid-column-end: 4;
-}
-
-.NavBarBoxBackToTwoCards {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 5;
-    grid-column-start: 2;
-    grid-column-end: 4;
+    grid-template-rows: repeat(2, 100px);
 }
 
 .NavBarBoxButton {
@@ -92,9 +19,9 @@
 
 .NavBarBoxButton:hover {
     transition: 500ms;
-    transform: translateY(-10px) translateX(-10px);
-    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+    box-shadow: inset 0 0 0 5px rgba(176, 171, 199, 0.867);
 }
+
 
 .NavBarBoxButton:not(:hover) {
     transition: 500ms;
