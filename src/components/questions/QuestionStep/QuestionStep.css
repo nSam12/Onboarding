@@ -1,0 +1,25 @@
+
+.QuestionStepCheckBoxesBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.QuestionStepBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.QuestionStepHeadingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.QuestionStepBoxHeading {
+    font-size: 25px;
+}
+

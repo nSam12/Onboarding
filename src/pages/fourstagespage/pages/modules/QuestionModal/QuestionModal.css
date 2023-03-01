@@ -1,10 +1,28 @@
 .QuestionModal {
+    font-family: 'Montserrat', sans-serif;
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 50%;
-    height: 50%;
-    background: rgba(0,100,100, 1);
+    top: 30px;
+    bottom: 30px;
+    right: 100px;
+    left: 100px;
+    border-radius: 20px;
+    background-color: rgb(111, 166, 211);
 }
+
+.QuestionModalHeading {
+    padding-top: 10px;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.QuestionModal {
+    display: grid;
+    grid-template-rows: 70px 1fr;
+    align-items: start; 
+}
+
+
+
