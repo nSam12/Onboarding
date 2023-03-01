@@ -1,9 +1,9 @@
-.ArticleBoxAboutCompany {
+.ArticleBoxCulture {
     display: grid;
     grid-template-rows: 350px 200px 200px 100px;
 }
 
-.ArticleBoxAboutCompanyImage {
+.ArticleBoxCultureImage {
     margin-top: 30px;
     margin-bottom: 30px;
     display: grid;
@@ -11,22 +11,22 @@
     grid-template-rows: 300px;
 }
 
-.ArticleBoxAboutCompanyImageItself {
+.ArticleBoxCultureImageItself {
     grid-column-start: 2;
     grid-column-end: 3;
-    background-image: url(./fefu_logo.png);
+    background-image: url(./Ryan_gosling.jpeg);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.ArticleBoxAboutCompanyHeading {
+.ArticleBoxCultureHeading {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 35px;
 }
 
-.ArticleBoxAboutCompanyText {
+.ArticleBoxCultureText {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,13 +34,13 @@
     font-size: 25px;
 }
 
-.ArticleBoxAboutCompanyButtonArea {
+.ArticleBoxCultureButtonArea {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.ArticleBoxAboutCompanyButtonAreaButton {
+.ArticleBoxCultureButtonAreaButton {
     height: 70px;
     width: 250px;
     border: none;
@@ -52,12 +52,16 @@
     cursor: pointer;
 }
 
-.ArticleBoxAboutCompanyButtonAreaButton:hover {
+.ArticleBoxCultureButtonAreaButton:hover {
     transition: 500ms;
     transform: translateY(-10px) translateX(-10px);
     box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
 }
 
-.ArticleBoxAboutCompanyButtonAreaButton:not(:hover) {
+.ArticleBoxCultureButtonAreaButton:not(:hover) {
     transition: 500ms;
 }
+
+
+
+
