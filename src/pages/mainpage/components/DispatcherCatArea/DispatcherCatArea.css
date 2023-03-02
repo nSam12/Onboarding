@@ -1,3 +1,9 @@
+.DispatcherCatBox {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    margin-bottom: 100px;
+}
+
 .DispatcherCatAreaHeading {
     display: flex;
     justify-content: center;
@@ -10,6 +16,7 @@
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 500px;
+    margin-bottom: 30px;
 }
 
 .DispatcherCatAreaBoxImage {
@@ -41,5 +48,9 @@
     transition: 500ms;
     transform: translateY(-10px) translateX(-10px);
     box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+
+.DispatcherCatAreaBoxContentButton:not(:hover) {
+    transition: 500ms;
 }
 

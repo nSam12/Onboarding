@@ -44,7 +44,6 @@ const SecondPage = () => {
                 <StagesCard></StagesCard>
                 <DispatcherCard></DispatcherCard>
                 <div className="SecondPageWrapper">
-                    <h1 className="SecondPageWrapperHeading">{String(auth.user.name) + " " +String(auth.user.id) + " "+ String(auth.user.email)}</h1>
                     <div className="SecondPageWrapperButtonArea">
                         <button onClick={LogoutFunction} className="SecondPageWrapperExitButton"> Выйти </button>
                         <button

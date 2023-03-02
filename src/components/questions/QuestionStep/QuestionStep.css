@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
 }
 
 .QuestionStepHeadingBox {
@@ -21,5 +21,51 @@
 
 .QuestionStepBoxHeading {
     font-size: 25px;
+}
+
+.QuestionStepFirstQuestion {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.QuestionStepFirstQuestionInputBar {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.QuestionStepSecondQuestion {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+}
+
+.QuestionStepSecondQuestionButton {
+    height: 30px;
+    width: 60px;
+    border-radius: 20px;
+}
+
+.QuestionStepThirdQuestion {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+}
+
+.QuestionStepThirdQuestionInputBar {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding-left: 10px;
 }
 

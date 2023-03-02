@@ -15,7 +15,7 @@ import { Outlet } from "react-router-dom";
 import GeneralAboutCompany from "../pages/DocPage/Articles/GeneralAboutCompany/GeneralAvoutCompany";
 import MyDepartment from "../pages/DocPage/Articles/MyDepartment/MyDepartment";
 import OfficePlan from "../pages/DocPage/Articles/OfficePlan/OfficePlan";
-import TechnicalDetails from "../pages/DocPage/Articles/TechnicalDetails/ TechnicalDatails";
+import TechnicalDetails from "../pages/DocPage/Articles/TechnicalDetails/TechnicalDetails";
 import WorkProcess from "../pages/DocPage/Articles/WorkProcess/WorkProcess";
 
 const Navigation = () => {

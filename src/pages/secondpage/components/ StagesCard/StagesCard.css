@@ -43,6 +43,10 @@
     box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
 }
 
+.SecondPageWrapperStagesCardCompleteBoxButton:not(:hover) {
+    transition: 500ms;
+}
+
 
 
 

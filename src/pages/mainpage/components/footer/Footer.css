@@ -1,9 +1,14 @@
 .Footer { 
     display: grid;
-    grid-template-columns: 150px 1fr 150px;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 250px;
     background-color: black;
     margin-top: 30px;
+}
+
+.FooterContentInfoBox {
+    padding-bottom: 1px;
+    border-bottom: 2px solid white;
 }
 
 .FooterContent {
@@ -17,7 +22,5 @@
     color: white;
 }
 
-.FooterContentInfo {
-    text-decoration: underline;
-}
+
  

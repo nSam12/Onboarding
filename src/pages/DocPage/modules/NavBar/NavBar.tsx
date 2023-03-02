@@ -7,7 +7,7 @@ const NavBar = () => {
             <button className="NavBarBoxButton">
                 <NavButton
                     url="/docs/general"
-                    ComponentName="Общие сведенья про компанию"
+                    ComponentName="Общие сведения про компанию"
                 ></NavButton>
             </button>
             <button className="NavBarBoxButton">
@@ -43,13 +43,13 @@ const NavBar = () => {
             <button className="NavBarBoxButton">
                 <NavButton
                     url="/docs"
-                    ComponentName="Страница кота диспетчера"
+                    ComponentName="Страница кота Диспетчера"
                 ></NavButton>
             </button>
             <button className="NavBarBoxButton NavBarBoxButtonNarrower">
                 <NavButton
                     url="/twocards"
-                    ComponentName="Назад - к 2м карточкам"
+                    ComponentName="Назад - к 2-м карточкам"
                 ></NavButton>
             </button>
         </div>

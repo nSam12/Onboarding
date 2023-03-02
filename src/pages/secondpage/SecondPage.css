@@ -5,7 +5,7 @@
 .SecondPageBox {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 600px 400px;
+    grid-template-rows: 600px 600px 300px;
     border: none;
 }
 
@@ -49,6 +49,10 @@
     box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
 }
 
+.SecondPageWrapperExitButton:not(:hover) {
+    transition: 500ms;
+}
+
 
 .SecondPageWrapperToMainButton {
     display: grid;
@@ -69,6 +73,10 @@
     transform: translateY(-10px) translateX(-10px);
     box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
 } 
+
+.SecondPageWrapperToMainButton:not(:hover) {
+    transition: 500ms;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 

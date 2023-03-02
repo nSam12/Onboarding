@@ -3,7 +3,9 @@ import "./Footer.css"
 const Footer = () =>{
     return <div className="Footer">
         <div className="FooterContent">
-            <span className="FooterContentInfo">Информация о проекте</span>
+            <div className="FooterContentInfoBox">
+                <span className="FooterContentInfo">Информация о проекте</span>
+            </div>
             <span>Главная страница</span>
             <span>Стадии обучения</span>
             <span>О нас</span>

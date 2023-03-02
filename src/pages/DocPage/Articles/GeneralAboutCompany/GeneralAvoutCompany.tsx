@@ -1,23 +1,20 @@
 import ArticleBox from "../../modules/ArticleBox/ArticleBox";
-import "./GeneralAboutCompany.css"
+import NavBar from "../../modules/NavBar/NavBar";
 
 const GeneralAboutCompany = () => {
     return <ArticleBox>
-        <div className="ArticleBoxAboutCompany">
-            <div className="ArticleBoxAboutCompanyImage">
-                <div className="ArticleBoxAboutCompanyImageItself"></div>
+        <div className="ArticleBox">
+            <div className="ArticleBoxImage">
+                <div className="ArticleBoxImageItslefCompany"></div>
             </div>
-            <div className="ArticleBoxAboutCompanyHeading">
-                <h2>В деле с 1899 года!</h2>
-            </div>
-            <div className="ArticleBoxAboutCompanyText">
-                <p>ДВФУ – крупнейший ВУЗ на Дальнем Востоке с богатой историей и плодотворным мемным сообществом</p>
-            </div>
-            <div className="ArticleBoxAboutCompanyButtonArea">
-                <button className="ArticleBoxAboutCompanyButtonAreaButton">Следующий раздел</button>
-            </div>
-        </div>  
+            <div className="ArticleBoxContent">
+                <h1 className="ArticleBoxContentHeading">В деле с 1899 года!</h1>
+                <p className="ArticleBoxContentText">Крупнейший кото-ВУЗ на Дальнем Востоке</p>
+            </div> 
+        </div>
     </ArticleBox>;
 };
 
 export default GeneralAboutCompany;
+
+//максимально избавиться от дивов с помощью Article.box.tsx

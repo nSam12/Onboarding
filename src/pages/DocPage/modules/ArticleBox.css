@@ -1,0 +1,101 @@
+.ArticleBox {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px 350px;
+}
+
+.ArticleBoxImage {
+    display: grid;
+    grid-template-columns: 1fr 400px 1fr;
+}
+
+.ArticleBoxImageItslefCompany {
+    background-image: url(../Articles/GeneralAboutCompany/Company_logo_another.png);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ArticleBoxImageItslefCulture {
+    background-image: url(../Articles/GultureArticles/I_will_do.png);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ArticleBoxImageItslefMyDepartment {
+    background-image: url(../Articles/MyDepartment/my_department.png);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.ArticleBoxImageItslefOffice {
+    background-image: url(../Articles/OfficePlan/catsearching.png);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.ArticleBoxImageItslefTechDetails {
+    background-image: url(../Articles/TechnicalDetails/catsearching.png);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.ArticleBoxImageItslefWorkProcess {
+    background-image: url(../Articles/WorkProcess/work_process.png);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.ArticleBoxContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    align-items: center; 
+}
+
+.ArticleBoxContentHeading {
+    font-size: 40px;
+}
+
+.ArticleBoxContentText {
+    font-size: 25px;
+}
+
+.ArticleBoxContentButton {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.ArticleBoxContentButton:hover {
+    transition: 500ms;
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 10px 10px 10px rgba(176, 171, 199, 0.867);
+}
+
+.ArticleBoxContentButton:not(:hover) {
+    transition: 500ms;
+}
+

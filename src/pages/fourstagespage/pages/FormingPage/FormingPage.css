@@ -1,3 +1,4 @@
+
 .FormingPageTopBox {
     display: grid;
     grid-template-columns: 1fr;
@@ -36,6 +37,7 @@
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     align-content: center;
+    margin-bottom: 30px;
 }
 
 .FormingPageBottomBoxButton {

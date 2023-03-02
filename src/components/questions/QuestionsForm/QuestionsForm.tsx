@@ -36,7 +36,7 @@ const QuestionsForm = ({ questions, closeModal }: QuestionProps) => {
             </div>
             <div className="QuestionModalContentQuestionNumber">
                 <h1>
-                    Номер вопроса {quesIndx + 1} из {IndxLen}
+                    Номер вопроса: {quesIndx + 1} из {IndxLen}
                 </h1>
             </div>
             <div className="QuestionFormButtonBox">

@@ -5,7 +5,7 @@ const DispatcherCatArea = () => {
 
     const navigate = useNavigate();
     return (
-        <div>
+        <div className="DispatcherCatBox">
             <div className="DispatcherCatAreaHeading">Кот Диспетчер – твой информационный помощник на время онбоардинга</div>
             <div className="DispatcherCatAreaBox">
                 <div className="DispatcherCatAreaBoxImage"></div>

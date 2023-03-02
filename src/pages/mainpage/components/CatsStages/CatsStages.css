@@ -1,4 +1,6 @@
 .CatsStagesBox {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
     display: grid;
     grid-template-rows: repeat(4, 500px);
 }

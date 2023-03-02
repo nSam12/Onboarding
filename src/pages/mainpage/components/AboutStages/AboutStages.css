@@ -1,9 +1,7 @@
-* {
-    padding-left: calc(50% - 600px);
-    padding-right: calc(50% - 600px);
-}
 
 .AboutOnboarding {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 750px;
