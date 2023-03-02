@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.375b82b7.css",
+    "main.js": "/static/js/main.e37842f6.js",
+    "static/media/Cat_Perform.jpg": "/static/media/Cat_Perform.31fb6b97b612b44dd805.jpg",
+    "static/media/Cat_Norm.jpg": "/static/media/Cat_Norm.5d87bce9b5e37f116c5d.jpg",
+    "static/media/Cat_Storm.jpg": "/static/media/Cat_Storm.7189e7cb651f0e883c5d.jpg",
+    "static/media/Cat_Form.jpg": "/static/media/Cat_Form.e67c5b0fe6e3ab2f9315.jpg",
+    "static/media/Ryan_gosling.jpeg": "/static/media/Ryan_gosling.07c80f03d9b33d8d6943.jpeg",
+    "static/media/все коты для Сони (вектор).png": "/static/media/все коты для Сони (вектор).ea8b65fcd6583fbe3131.png",
+    "static/media/perform_cat.png": "/static/media/perform_cat.8f3e271703af92234d73.png",
+    "static/media/Кот-диспетчер (зеркалка).png": "/static/media/Кот-диспетчер (зеркалка).4e8bab2a3562ea3d68d9.png",
+    "static/media/norm_cat.png": "/static/media/norm_cat.fa397359313feedd8df5.png",
+    "static/media/storm_cat.png": "/static/media/storm_cat.970ea1d74944b4e0b59a.png",
+    "static/media/form_cat.png": "/static/media/form_cat.9b180a2fd816bceea641.png",
+    "static/media/cats_together.png": "/static/media/cats_together.90b6503ffbca065391cf.png",
+    "static/media/fefu_logo.png": "/static/media/fefu_logo.1089341da08c21507d4e.png",
+    "static/media/lupa.png": "/static/media/lupa.8d02cd166d9ee882f3e4.png",
+    "index.html": "/index.html",
+    "main.375b82b7.css.map": "/static/css/main.375b82b7.css.map",
+    "main.e37842f6.js.map": "/static/js/main.e37842f6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.375b82b7.css",
+    "static/js/main.e37842f6.js"
+  ]
+}
