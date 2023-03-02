@@ -1,31 +1,11 @@
-.NavBarBox {
+.NavBar {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 100px);
 }
 
-.NavBarBoxButton {
-    height: 70px;
-    width: 250px;
-    border: none;
-    border-radius: 20px;
-    background-color: rgba(230, 227, 244, 0.867);
-    text-decoration: none;
-    font-size: 15px;
-    color: black;
-    cursor: pointer;
-}
 
-.NavBarBoxButton:hover {
-    transition: 500ms;
-    box-shadow: inset 0 0 0 5px rgba(176, 171, 199, 0.867);
-}
-
-
-.NavBarBoxButton:not(:hover) {
-    transition: 500ms;
-}
 
 
 
