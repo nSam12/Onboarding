@@ -30,19 +30,24 @@ const QuestionsForm = ({ questions, closeModal }: QuestionProps) => {
         }
     };
     return (
-        <div>
-            <QuestionStep ques={questions.questions[quesIndx]}></QuestionStep>
-            <h1>
-                Номер вопроса {quesIndx + 1} из {IndxLen}
-            </h1>
-
-            <button onClick={decIndx}> Предыдущий вопрос</button>
-            <button onClick={incIndx}> Следующий вопрос</button>
-            {quesIndx === IndxLen - 1 && (
-                <button onClick={End}>Завершить опрос</button>
-            )}
-            <h2></h2>
-            <button onClick={closeModal}> Закрыть</button>
+        <div className="QuestionModalContent">
+            <div className="QuestionModalContentTopBox">
+                <QuestionStep ques={questions.questions[quesIndx]}></QuestionStep>
+            </div>
+            <div className="QuestionModalContentQuestionNumber">
+                <h1>
+                    Номер вопроса {quesIndx + 1} из {IndxLen}
+                </h1>
+            </div>
+            <div className="QuestionFormButtonBox">
+                <button onClick={decIndx} className="QuestionFormButtonBoxButton"> Предыдущий вопрос</button>
+                <button onClick={incIndx} className="QuestionFormButtonBoxButton"> Следующий вопрос</button>
+                {quesIndx === IndxLen - 1 && (
+                    <button onClick={End} className="QuestionFormButtonBoxButton">Завершить опрос</button>
+                )}
+                <h2></h2>
+                <button onClick={closeModal} className="QuestionFormButtonBoxButton"> Закрыть</button>
+            </div>
         </div>
     );
 };

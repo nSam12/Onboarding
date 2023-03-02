@@ -31,7 +31,7 @@ const QuestionStep = (props: QuestionStepProps) => {
     } else if (props.ques.answer.answerType === AnswerType.MULTANSWER) {
         //ques.answer.answer
         const list = props.ques.answer.answer.options.map((elem) => <div>{elem} <input type={"checkbox"}></input></div>  )
-        t = <div> Выберите варианты 
+        t = <div className="QuestionStepCheckBoxesBox"> Выберите варианты 
             {list}
         </div>;
     } else {
@@ -40,8 +40,10 @@ const QuestionStep = (props: QuestionStepProps) => {
 
 
     return (
-        <div>
-            <h1>{props.ques.question}</h1>
+        <div className="QuestionStepBox">
+            <div className="QuestionStepHeadingBox">
+                <h1 className="QuestionStepBoxHeading">{props.ques.question}</h1>
+            </div>
             {t}
         </div>
     );

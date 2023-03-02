@@ -1,0 +1,35 @@
+.QuestionModalContent {
+    margin-top: 50px;
+    display: grid;
+    align-content: center;
+    grid-template-rows: 130px 50px 50px 50px 50px;
+}
+
+.QuestionModalContentQuestionNumber {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.QuestionFormButtonBox {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: repeat(4, 1fr);
+  margin-top: 70px;
+  gap: 30px;
+}
+
+.QuestionFormButtonBoxButton {
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(230, 227, 244, 0.867);
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+}

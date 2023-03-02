@@ -9,7 +9,7 @@ import "./QuestionModal.css";
 const q1: Question = {
     id: "1",
     question:
-        "Есть ли что-то, что мешает вам рекомендовать компанию своим друзьям как хорошее место для работы?",
+        "Что мешает Вам рекомендовать компанию друзьям?",
     answer: { answerType: AnswerType.FREETEXT, answer: "" },
 };
 
@@ -27,8 +27,8 @@ const q3: Question = {
 
 const q4: Question = {
     id: "4",
-    question: "Когда происходит что-то плохое на работе, знаете ли вы, к кому обратиться за помощью?",
-    answer: {answerType: AnswerType.MULTANSWER, answer: {options:["да", "скорее да", "нет", "скорее нет"], answerID: 0}}
+    question: "Вы знаете, к кому обратиться на работе в случае проблемы?",
+    answer: {answerType: AnswerType.MULTANSWER, answer: {options:["да", "нет"], answerID: 0}}
 }
 
 const Q: Questions = {
@@ -41,7 +41,6 @@ const QuestionModal = (props:any) => {
     const Questions: Questions = Q;
     return (
         <div className="QuestionModal">
-            <h1>{Questions.name}</h1>
             <QuestionsForm questions={Q} closeModal={props.closeModal} ></QuestionsForm>
         </div>
     );
