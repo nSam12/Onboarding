@@ -8,6 +8,10 @@ export interface Stages{
 
 }
 
+export interface Forming{
+
+}
+
 export interface NormingData{
 
 }

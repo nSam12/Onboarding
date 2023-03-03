@@ -1,57 +1,52 @@
 import NavButton from "../NavButton/NavButton";
-import "./NavBar.css"
+import "./NavBar.css";
 
 const NavBar = () => {
+
+
+
     return (
-        <div className="NavBarBox">
-            <button className="NavBarBoxButton">
-                <NavButton
-                    url="/docs/general"
-                    ComponentName="Общие сведения про компанию"
-                ></NavButton>
-            </button>
-            <button className="NavBarBoxButton">
-                <NavButton
-                    url="/docs/culture"
-                    ComponentName="Культура компании"
-                ></NavButton>
-            </button>
-            <button className="NavBarBoxButton">
-                <NavButton
-                    url="/docs/mydepartment"
-                    ComponentName="Про мой департамент"
-                ></NavButton>
-            </button>
-            <button className="NavBarBoxButton">
-                <NavButton
-                    url="/docs/officeplan"
-                    ComponentName="План офиса"
-                ></NavButton>
-            </button>
-            <button className="NavBarBoxButton">
-                <NavButton
-                    url="/docs/technical"
-                    ComponentName="Обзор на документацию проекта"
-                ></NavButton>
-            </button>
-            <button className="NavBarBoxButton">
-                <NavButton
-                    url="/docs/work"
-                    ComponentName="Описание рабочего процесса"
-                ></NavButton>
-            </button>
-            <button className="NavBarBoxButton">
-                <NavButton
-                    url="/docs"
-                    ComponentName="Страница кота Диспетчера"
-                ></NavButton>
-            </button>
-            <button className="NavBarBoxButton NavBarBoxButtonNarrower">
-                <NavButton
-                    url="/twocards"
-                    ComponentName="Назад - к 2-м карточкам"
-                ></NavButton>
-            </button>
+        <div className="NavBar">
+            <NavButton
+                url="/docs/general"
+                ComponentName="Общие сведения про компанию"
+            ></NavButton>
+
+            <NavButton
+                url="/docs/culture"
+                ComponentName="Культура компании"
+            ></NavButton>
+
+            <NavButton
+                url="/docs/mydepartment"
+                ComponentName="Про мой департамент"
+            ></NavButton>
+
+            <NavButton
+                url="/docs/officeplan"
+                ComponentName="План офиса"
+            ></NavButton>
+
+            <NavButton
+                url="/docs/technical"
+                ComponentName="Обзор на документацию проекта"
+            ></NavButton>
+
+            <NavButton
+                url="/docs/work"
+                ComponentName="Описание рабочего процесса"
+            ></NavButton>
+
+            <NavButton
+                url="/docs"
+                ComponentName="Страница кота диспетчера"
+            ></NavButton>
+
+            <NavButton
+                url="/twocards"
+                ComponentName="Назад"
+            ></NavButton>
+
         </div>
     );
 };

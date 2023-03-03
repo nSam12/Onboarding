@@ -17,6 +17,7 @@ import MyDepartment from "../pages/DocPage/Articles/MyDepartment/MyDepartment";
 import OfficePlan from "../pages/DocPage/Articles/OfficePlan/OfficePlan";
 import TechnicalDetails from "../pages/DocPage/Articles/TechnicalDetails/TechnicalDetails";
 import WorkProcess from "../pages/DocPage/Articles/WorkProcess/WorkProcess";
+import PersonalOffice from "../pages/PersonalOffice/PersonalOffice";
 
 const Navigation = () => {
     const auth = useTypedSelector((state) => state.auth);
@@ -75,6 +76,16 @@ const Navigation = () => {
                     />
                 }
                 path="/storming"
+            />
+
+            <Route
+                element={
+                    <PrivateRoute
+                        isAuth={auth.isAuth}
+                        component={PersonalOffice}
+                    />
+                }
+                path="/personaloffice"
             />
         </Routes>
     );
